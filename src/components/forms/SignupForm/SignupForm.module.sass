@@ -1,0 +1,103 @@
+.form
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  gap: 10px
+  padding: 16px
+  margin: 32px auto
+  max-width: 600px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+  color: white
+
+.header
+  font-size: 28px
+  font-weight: 700
+  text-align: center
+
+.subHeader
+  font-size: 18px
+  text-align: center
+  margin-bottom: 20px
+
+.inputGroup
+  display: grid
+  grid-template-columns: repeat(2, 1fr) // Two equal-width columns
+  gap: 10px
+  width: 100%
+  max-width: 600px 
+  margin-bottom: 25px
+
+.label
+  display: flex
+  flex-direction: column
+  width: 100%
+
+.input
+
+
+.radioGroup
+  display: flex
+  flex-direction: column
+  gap: 16px
+  width: 100%
+
+.radioTitle
+  font-size: 20px
+  font-weight: 600
+
+.radioDescription
+  padding-left: 20px
+  font-size: 12px
+
+.buyerWrapper,
+.creativeWrapper
+  border: 2px solid white
+  padding: 10px
+  position: relative
+
+.creativeWrapper
+  margin-bottom: 20px
+
+.checkboxLabel
+  position: relative
+  font-size: 14px
+  margin-top: 10px
+
+.submitButton
+  margin-top: 20px
+  align-self: stretch
+  padding: 18px
+  background-color: rgb(40, 210, 208)
+  border: none
+  color: white
+  transition: 0.3s linear
+  cursor: pointer
+
+  &:hover
+    background-color: rgb(1, 224, 221)
+
+.error,
+.radioError
+  color: red
+  position: absolute
+  top: 100%
+  font-size: 14px
+
+.radioError
+  top: 87%
+
+  @media screen and (max-width: 600px) 
+    top: 127%
+
+.error
+  top: 100%
+  left: 0
+
+@media screen and (max-width: 600px)
+  .inputGroup
+    grid-template-columns: 1fr 
+    gap: 10px
+
+  .label
+    width: 100%

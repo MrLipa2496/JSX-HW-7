@@ -1,0 +1,54 @@
+.formWrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  min-height: 500px
+  padding: 20px
+
+.formTitle
+  font-size: 24px
+  font-weight: bold
+  color: white
+  margin-bottom: 20px
+
+.form
+  display: flex
+  flex-direction: column
+  width: 100%
+  max-width: 400px
+  padding: 20px
+  border-radius: 8px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+
+.label
+  display: flex
+  flex-direction: column
+  margin-bottom: 20px
+  position: relative
+
+
+.valid
+    border: 2px solid lightgreen
+
+.invalid
+    border: 2px solid red
+
+.error
+  color: #ff0000
+  font-size: 14px
+  top: 100%
+  position: absolute
+
+
+.formBtn
+  padding: 10px 20px
+  background-color: rgb(40, 210, 208)
+  color: #ffffff
+  border: none
+  border-radius: 4px
+  font-size: 16px
+  cursor: pointer
+  transition: 0.3s linear
+  &:hover
+    background-color: rgb(1, 224, 221)
