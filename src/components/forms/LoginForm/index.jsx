@@ -1,18 +1,18 @@
-import { Formik, Form } from "formik";
-import Header from "../../Header";
-import { LOGIN_FORM_VALIDATION } from "../../../utils/validationSchemas";
-import styles from "./LoginForm.module.sass";
-import ValidatedField from "../../ValidatedField";
+import { Formik, Form } from 'formik'
+import Header from '../../Header'
+import { LOGIN_FORM_VALIDATION } from '../../../utils/validationSchemas'
+import styles from './LoginForm.module.sass'
+import ValidatedField from '../ValidatedField'
 
-function LoginForm() {
+function LoginForm () {
   const initialValues = {
-    email: "",
-    password: "",
-  };
+    email: '',
+    password: ''
+  }
 
-  const handleSubmit = ({ resetForm }) => {
-    resetForm();
-  };
+  const handleSubmit = (values, { resetForm }) => {
+    resetForm()
+  }
 
   return (
     <>
@@ -27,32 +27,28 @@ function LoginForm() {
             <div className={styles.formWrapper}>
               <div className={styles.formTitle}>LOGIN TO YOUR ACCOUNT</div>
               <Form className={styles.form}>
-                <label className={styles.label}>
-                  <ValidatedField
-                    name="email"
-                    type="text"
-                    placeholder="your@mail"
-                    autoFocus
-                  />
-                </label>
-                <label className={styles.label}>
-                  <ValidatedField
-                    name="password"
-                    type="password"
-                    placeholder="password"
-                  />
-                </label>
+                <ValidatedField
+                  name='email'
+                  type='text'
+                  placeholder='your@mail'
+                  autoFocus
+                />
+                <ValidatedField
+                  name='password'
+                  type='password'
+                  placeholder='password'
+                />
 
-                <button className={styles.formBtn} type="submit">
+                <button className={styles.formBtn} type='submit'>
                   OK
                 </button>
               </Form>
             </div>
-          );
+          )
         }}
       </Formik>
     </>
-  );
+  )
 }
 
-export default LoginForm;
+export default LoginForm
